@@ -249,6 +249,56 @@
 
 
 
+<div class="Card-archive" id="hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d" data-name="IntelliJ安装后个性化" data-version>
+	<mark class="Card-badge"></mark>
+	<div class="Card-body">
+		<h3 class="Card-title">
+			
+				<a href="/2019/06/07/IntelliJ安装后个性化/">
+			
+			IntelliJ安装后个性化</a>
+		</h3>
+		<div class="Card-meta">
+			<div class="Card-tags">
+<div class="tags">
+	
+		
+			
+				<label class="tag-1"><a href="/tags/software/">Software</a></label>
+			
+		
+	
+	</div>
+</div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class="fa fa-calendar"></i> 2019-06-07
+						</a>
+					</li>
+					
+					
+					<li>
+						<a href="/2019/06/07/IntelliJ安装后个性化/#article-comment">
+							<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class="card-visit-count">0</span>
+					</li>
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
 <div class="Card-archive" id="hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b" data-name="开始上路" data-version>
 	<mark class="Card-badge"></mark>
 	<div class="Card-body">
@@ -476,6 +526,14 @@
           
           
           
+            var postBadge = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -496,6 +554,36 @@
       success: function(){
           LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+          leanCloud.fetchCommentCount('/2019/06/07/IntelliJ安装后个性化/');
+          leanCloud.fetchVisitCount('/2019/06/07/IntelliJ安装后个性化/');
+          leanCloud.fetchThumbUpCount('/2019/06/07/IntelliJ安装后个性化/');
+          leanCloud.getCommentCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
+              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           

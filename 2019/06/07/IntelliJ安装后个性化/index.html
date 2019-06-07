@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>Abel's Blog</title>
+      <title>IntelliJ安装后个性化 - Abel's Blog</title>
   
 
   
@@ -150,6 +150,20 @@
 		
 	
 	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/colorful-outlined/toc.svg" alt>
+</div>
+
+	</div>
+	
 	<div class="nav-item" id="nav-item-archive">
 		
 				<div class="nav-icon">
@@ -231,17 +245,11 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div style="flex: 1;">
-      
-
-
-<div class="index-container" id="/index.html" data-name="index" data-version="2.1.3">
-	<div class="index-intro">
-		在不断变换的时代唱着不变的歌。
-	</div>
-	
-		<div class="grid-2_md-1 grid-equalHeight index-cards">
-		
-			
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
 
 
 
@@ -250,190 +258,177 @@
 
 
 
+    
+    
 
 
 
 
-<div class="Card Card-hover Card-index-1" id="hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d" data-name="IntelliJ安装后个性化" data-version>
-	
-		
-		
-	
-	<mark class="Card-badge" style="{visibility: " hidden"}"></mark>
-	<div class="Card-figure">
-		
-			<a href="/2019/06/07/IntelliJ安装后个性化/">
-		
 
-		 
-			<img class="grow" src="{{ url_for(generate_post_icon(item.title)) }}" alt onerror="this.src = " images jdenticon debbe3989c2e09017e13bd5449b65cc6d80a1312c52214e60199854fac5973fd.png""> 
-		
-		</a>
-	</div>
-	<div class="Card-body">
 
-			<div class="Card-title">
-				<h2>
-				
-					<a href="/2019/06/07/IntelliJ安装后个性化/">
-				
-				IntelliJ安装后个性化</a></h2>
-			</div>
-			<div class="Card-excerpt">
-				<p>
-				
-					<a href="/2019/06/07/IntelliJ安装后个性化/">
-				
-				
-				
-				安装完IntelliJ后，java的自动补全main和syso不能用，要设置一下。mac和win版大同小异。如图添加即可：
-顺便alt+/补全的功能：
-因为alt+/已经有快捷键占用了，所以会报错，根据报错信息把那个占用的去掉就可以了。
-				</a></p>
-				
-			</div>
+    
+    
+        
+    
 
-			
-			
-			<div class="Card-meta">
-				
-				<div class="Card-tags">
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2019/06/07/IntelliJ安装后个性化/" data-name="IntelliJ安装后个性化" data-version>
+
+    <!-- Title -->
+    <div class="article-header">
+         
+         <h1 class="article-title">
+            <a href="/2019/06/07/IntelliJ安装后个性化/">
+                IntelliJ安装后个性化
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class="article-meta">
+    <ul>
+            <li><i class="fa fa-calendar"></i> 2019-06-07</li>
+            
+            <li class="comment-button"><a href="#article-comment"><i class="fa fa-comments"></i> <span id="article-comment-count">0</span></a></li>
+            <li><i class="fa fa-eye"></i> <span id="article-visit-count">0</span></li>
+            <li class="thumb-up-button" id="thumb-up-button"><i class="far fa-thumbs-up fa-lg" id="thumb-up-icon"></i> <span id="article-thumbup-count">0</span></li>
+            
+            <li><i class="fa fa-user"></i> Abel Shi</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
 <div class="tags">
 	
 		
-			
-				<label class="tag-1"><a href="/tags/software/">Software</a></label>
-			
+			<label class="tag-1"><a href="/tags/software/">Software</a></label>
 		
 	
 	</div>
+
+    </div>
+    <div class="article-cards">
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                Abel Shi
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
 </div>
-				
-				<ul>
-						<li class="card-calendar">
-							<a href="/archives/">
-								<i class="fa fa-calendar"></i> 2019-06-07
-							</a>
-						</li>
-						
-						
-						<li class="card-comment">
-							<a href="/2019/06/07/IntelliJ安装后个性化/#article-comment">
-								<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
-							</a>
-						</li>
-						<li class="card-visitor"><i class="fa fa-eye"></i> <span class="card-visit-count">0</span></li>
-						<li class="card-thumbup-container"><i class="far fa-thumbs-up"></i> <span class="card-thumbup-count">0</span></li>
-						
-						
-				</ul>
-			</div>
-		
-	</div>
+<div class="card-chart">
+  <div id="chart-post-visit"></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
 </div>
-		
-			
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="Card Card-hover Card-index-2" id="hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b" data-name="开始上路" data-version>
-	
-		
-		
-	
-	<mark class="Card-badge" style="{visibility: " hidden"}"></mark>
-	<div class="Card-figure">
-		
-			<a href="/2019/06/02/开始上路/">
-		
-
-		 
-			<img class="grow" src="{{ url_for(generate_post_icon(item.title)) }}" alt onerror="this.src = " images jdenticon e4aa4dffd3b32ca13c0ce7f75d32e89618d1b54bdc4c371675c0098f44563e11.png""> 
-		
-		</a>
-	</div>
-	<div class="Card-body">
-
-			<div class="Card-title">
-				<h2>
-				
-					<a href="/2019/06/02/开始上路/">
-				
-				开始上路</a></h2>
-			</div>
-			<div class="Card-excerpt">
-				<p>
-				
-					<a href="/2019/06/02/开始上路/">
-				
-				
-				
-				开始制作这个博客，纯粹是因为突如其来的公司裁员，让我意识到中年危机已经到来！在这个技术不断更新换代的年代，一成不变是最可怕的事情。而学习后记不住，或者不使用逐渐遗忘，也让人无法进步。使用这个博客，记录一些学习的内容，希望可以保持更新，持续进步。
-				</a></p>
-				
-			</div>
-
-			
-			
-			<div class="Card-meta">
-				
-				<div class="Card-tags"></div>
-				
-				<ul>
-						<li class="card-calendar">
-							<a href="/archives/">
-								<i class="fa fa-calendar"></i> 2019-06-02
-							</a>
-						</li>
-						
-						
-						<li class="card-comment">
-							<a href="/2019/06/02/开始上路/#article-comment">
-								<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
-							</a>
-						</li>
-						<li class="card-visitor"><i class="fa fa-eye"></i> <span class="card-visit-count">0</span></li>
-						<li class="card-thumbup-container"><i class="far fa-thumbs-up"></i> <span class="card-thumbup-count">0</span></li>
-						
-						
-				</ul>
-			</div>
-		
-	</div>
+<div class="card-text">
+  <p id="text-post-summary">安装完IntelliJ后，java的自动补全main和syso不能用，要设置一下。mac和win版大同小异。如图添加即可：
+顺便alt+/补全的功能：
+因为alt+/已经有快捷键占用了，所以会报错，根据报错信息把那个占用的去掉就可以了。</p>
 </div>
-		
-		</div>
-	
-	<br>
-	
-	<div class="pagination">
-	
-	
-	
-	
-		
-		
-		<div class="pagination-item">
-			
-			
-				<span>1</span>
-			
-		</div>
-		
-		
-	
-	
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id="article-toc">
+    
+        
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+
 </div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/colorful-outlined/toc.svg" alt>
 </div>
+
+    </div>
+    <div class="article-content">
+    <p>安装完IntelliJ后，java的自动补全main和syso不能用，要设置一下。<br>mac和win版大同小异。<br>如图添加即可：<br><img src="../images/blogpics/pic1.png" alt="Alt text"></p>
+<p>顺便alt+/补全的功能：<br><img src="../images/blogpics/pic2.png" alt="Alt text"></p>
+<p>因为alt+/已经有快捷键占用了，所以会报错，根据报错信息把那个占用的去掉就可以了。</p>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id="article-comment">
+            
+
+<h1>Comment</h1>
+
+  
+    <div id="valine"></div>
+  
+
+
+        </div>
+        
+</article>
   </div>
 
   
@@ -488,6 +483,20 @@
 		
 		
 	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/colorful-outlined/toc.svg" alt>
+</div>
+
+	</div>
 	
 	<div class="nav-item" id="nav-item-archive">
 		
@@ -610,29 +619,12 @@
 <script type="text/javascript">
 
   
-    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
-    loadjs.ready('post-version', {
-      success: function(){
-        console.log('ready to run badge script')
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-      }
-    })
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d').update('hashit_d2d4b8f1134b276e87158e887f26f85ac11a2c19f9c48dbe83b455e5422d2012', function(){});
+  });
   
 </script>
 
@@ -640,76 +632,59 @@
     
 <script type="text/javascript">
   
-    function getIP(json) {
-      loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
-    loadjs.ready('post-visit-comment-count', {
-      success: function(){
-          LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
-          var leanCloud = LeanCloud.getInstance();
-        
+  // update cookie if this page is opened (directly)
+  function getIP(json) {
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+  loadjs.ready('post-visit-comment-count', function(){
+    
+    
+    LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
+    var leanCloud = LeanCloud.getInstance();
+    leanCloud.fetchIsThumbUp('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
           
-          
-          // start caching post visit and comment counts
-          leanCloud.fetchIsThumbUp('/2019/06/07/IntelliJ安装后个性化/', json.ip);
-          leanCloud.fetchCommentCount('/2019/06/07/IntelliJ安装后个性化/');
-          leanCloud.fetchVisitCount('/2019/06/07/IntelliJ安装后个性化/');
-          leanCloud.fetchThumbUpCount('/2019/06/07/IntelliJ安装后个性化/');
-          leanCloud.getCommentCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
-              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-comment-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getVisitCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
-              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-visit-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
-              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-thumbup-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
-              var el = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d .card-thumbup-container i');
-              if(el){
-                if(isThumbUp){
-                  el.className = 'fas fa-thumbs-up';
-                }else{
-                  el.className = 'far fa-thumbs-up';
-                }
-              }
-          });
-        
-          
-          
-          // start caching post visit and comment counts
-          leanCloud.fetchIsThumbUp('/2019/06/02/开始上路/', json.ip);
-          leanCloud.fetchCommentCount('/2019/06/02/开始上路/');
-          leanCloud.fetchVisitCount('/2019/06/02/开始上路/');
-          leanCloud.fetchThumbUpCount('/2019/06/02/开始上路/');
-          leanCloud.getCommentCount('/2019/06/02/开始上路/', function(count){
-              var el = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b .card-comment-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getVisitCount('/2019/06/02/开始上路/', function(count){
-              var el = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b .card-visit-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getThumbUpCount('/2019/06/02/开始上路/', function(count){
-              var el = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b .card-thumbup-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.isThumbUp('/2019/06/02/开始上路/', function(isThumbUp){
-              var el = document.querySelector('#hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b .card-thumbup-container i');
-              if(el){
-                if(isThumbUp){
-                  el.className = 'fas fa-thumbs-up';
-                }else{
-                  el.className = 'far fa-thumbs-up';
-                }
-              }
-          });
-        
-      }
-    })
-    }
+        }else{
+          leanCloud.addThumbUpRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+    leanCloud.fetchCommentCount('/2019/06/07/IntelliJ安装后个性化/');
+    leanCloud.fetchVisitCount('/2019/06/07/IntelliJ安装后个性化/');
+    leanCloud.fetchThumbUpCount('/2019/06/07/IntelliJ安装后个性化/');
+    leanCloud.getCommentCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+        var el = document.querySelector('#article-comment-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getVisitCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+        var el = document.querySelector('#article-visit-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
+  });
+  }
   
 </script>
 
@@ -729,18 +704,12 @@ changeLayoutOnTouchScreen();
 
 // 
 // var post = new Post('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
-// console.log(post);
-// $('.Card').each(function(){
-//     var post_url = $(this).attr('id');
-//     var true_url = $(this).find('.Card-title a').first().attr('href');
-//     var card = this;
-//     post.getCommentCount(post_url, function(count){
-//         $(card).find('.card-comment-count').first().text(count);
-//     });
-//     post.getVisitCount(post_url, function(count){
-//         $(card).find('.card-visit-count').first().text(count);
-//     });
-    
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
 // });
 
 // 
