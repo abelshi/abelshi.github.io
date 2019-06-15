@@ -254,7 +254,96 @@
 
 
 
-<div class="Card Card-hover Card-index-1" id="hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d" data-name="IntelliJ安装后个性化" data-version>
+<div class="Card Card-hover Card-index-1" id="hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6" data-name="一些经典算法" data-version>
+	
+		
+		
+	
+	<mark class="Card-badge" style="{visibility: " hidden"}"></mark>
+	<div class="Card-figure">
+		
+			<a href="/2019/06/08/一些经典算法/">
+		
+
+		 
+			<img class="grow" src="{{ url_for(generate_post_icon(item.title)) }}" alt onerror="this.src = " images jdenticon 1dafbed83019de48afd38f26b1319f88d749653ca755489c889ab698f7967657.png""> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class="Card-title">
+				<h2>
+				
+					<a href="/2019/06/08/一些经典算法/">
+				
+				一些经典算法</a></h2>
+			</div>
+			<div class="Card-excerpt">
+				<p>
+				
+					<a href="/2019/06/08/一些经典算法/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class="Card-tags">
+<div class="tags">
+	
+		
+			
+				<label class="tag-1"><a href="/tags/algorithm/">Algorithm</a></label>
+			
+		
+	
+	</div>
+</div>
+				
+				<ul>
+						<li class="card-calendar">
+							<a href="/archives/">
+								<i class="fa fa-calendar"></i> 2019-06-08
+							</a>
+						</li>
+						
+						
+						<li class="card-comment">
+							<a href="/2019/06/08/一些经典算法/#article-comment">
+								<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
+							</a>
+						</li>
+						<li class="card-visitor"><i class="fa fa-eye"></i> <span class="card-visit-count">0</span></li>
+						<li class="card-thumbup-container"><i class="far fa-thumbs-up"></i> <span class="card-thumbup-count">0</span></li>
+						
+						
+				</ul>
+			</div>
+		
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="Card Card-hover Card-index-2" id="hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d" data-name="IntelliJ安装后个性化" data-version>
 	
 		
 		
@@ -345,7 +434,7 @@
 
 
 
-<div class="Card Card-hover Card-index-2" id="hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b" data-name="开始上路" data-version>
+<div class="Card Card-hover Card-index-3" id="hashit_b48ee82d4bf7847c39fbdf5f0788054ed78d9721a481a013fad628d14358884b" data-name="开始上路" data-version>
 	
 		
 		
@@ -454,7 +543,7 @@
                 
             
                 
-                    <div class="footer-social-item"><a href="https://www.linkedin.com/in/abelshi" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="footer-social-item"><a href="https://www.linkedin.com/in/shiacer" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a></div>
                 
             
         
@@ -618,6 +707,14 @@
           
           
           
+            var postBadge = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -646,6 +743,36 @@
       success: function(){
           LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2019/06/08/一些经典算法/', json.ip);
+          leanCloud.fetchCommentCount('/2019/06/08/一些经典算法/');
+          leanCloud.fetchVisitCount('/2019/06/08/一些经典算法/');
+          leanCloud.fetchThumbUpCount('/2019/06/08/一些经典算法/');
+          leanCloud.getCommentCount('/2019/06/08/一些经典算法/', function(count){
+              var el = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2019/06/08/一些经典算法/', function(count){
+              var el = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2019/06/08/一些经典算法/', function(count){
+              var el = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2019/06/08/一些经典算法/', function(isThumbUp){
+              var el = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           

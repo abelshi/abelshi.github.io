@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>IntelliJ安装后个性化 - Abel's Blog</title>
+      <title>一些经典算法 - Abel's Blog</title>
   
 
   
@@ -283,14 +283,14 @@
 
 
 
-<article class="article" id="/2019/06/07/IntelliJ安装后个性化/" data-name="IntelliJ安装后个性化" data-version>
+<article class="article" id="/2019/06/08/一些经典算法/" data-name="一些经典算法" data-version>
 
     <!-- Title -->
     <div class="article-header">
          
          <h1 class="article-title">
-            <a href="/2019/06/07/IntelliJ安装后个性化/">
-                IntelliJ安装后个性化
+            <a href="/2019/06/08/一些经典算法/">
+                一些经典算法
             </a>
         </h1>
         <!-- TODO: support nested categories,display them nicely -->
@@ -300,7 +300,7 @@
     <!-- Date and Author -->
     <div class="article-meta">
     <ul>
-            <li><i class="fa fa-calendar"></i> 2019-06-07</li>
+            <li><i class="fa fa-calendar"></i> 2019-06-08</li>
             
             <li class="comment-button"><a href="#article-comment"><i class="fa fa-comments"></i> <span id="article-comment-count">0</span></a></li>
             <li><i class="fa fa-eye"></i> <span id="article-visit-count">0</span></li>
@@ -321,7 +321,7 @@
 <div class="tags">
 	
 		
-			<label class="tag-1"><a href="/tags/software/">Software</a></label>
+			<label class="tag-1"><a href="/tags/algorithm/">Algorithm</a></label>
 		
 	
 	</div>
@@ -380,9 +380,7 @@
   <h3>Quick Read</h3>
 </div>
 <div class="card-text">
-  <p id="text-post-summary">安装完IntelliJ后，java的自动补全main和syso不能用，要设置一下。mac和win版大同小异。如图添加即可：
-顺便alt+/补全的功能：
-因为alt+/已经有快捷键占用了，所以会报错，根据报错信息把那个占用的去掉就可以了。</p>
+  <p id="text-post-summary">...</p>
 </div>
         </div> -->
     </div>
@@ -408,9 +406,17 @@
 
     </div>
     <div class="article-content">
-    <p>安装完IntelliJ后，java的自动补全main和syso不能用，要设置一下。<br>mac和win版大同小异。<br>如图添加即可：<br><img src="/images/blogpics/pic1.png" alt="Alt text"></p>
-<p>顺便alt+/补全的功能：<br><img src="/images/blogpics/pic2.png" alt="Alt text"></p>
-<p>因为alt+/已经有快捷键占用了，所以会报错，根据报错信息把那个占用的去掉就可以了。</p>
+    <p>网上各种算法的详细解释已经很多了，<br>这里就放一些大纲。</p>
+<p>直接插入<br>希尔排序<br>二分排序<br>冒泡排序<br>选择排序<br>快速排序<br>归并排序<br>堆排序</p>
+<p>这几个要烂熟于心。</p>
+<p>其中：<br>希尔排序和插入排序一样，不同的是，将插入排序的每次+1换成步进值即可。</p>
+<p>二分排序，好多公司喜欢出这个和快排作为面试题，太经典了，一定要弄明白。</p>
+<p>冒泡排序和选择排序，这两个排序在写法上类似，但是：<br>冒泡排序是，第二个循环内部比较，每次都将最大的放到最右边，从而下次循环比较可以将排序范围的右边减少一个。</p>
+<p>选择排序是，两个循环的数值比较，每次将最小的放在最左边，从而每次排序范围从最左边减少一个。</p>
+<p>快排，不管是刨坑法，还是换位法，主要思想就是找中轴线，先排后分再递归。<br>每次排序找出中轴线j的位置，然后low–j-1, j+1–high,分成两个部分，用递归即可。</p>
+<p>归并，先分再排最后合。归并是将整个数组按mid分成两部分，然后再排序。当分成不能再分割的两部分时，排序（有奇数、有偶数的情况）。将每一小块排序完，合并在一起，即完成排序。</p>
+<p>堆排序，这个理论比前边的多一些，先把所有数据看成一个完全二叉树（完全二叉树，完美二叉树，满二叉树的区别了解一下）。<br>先做出大根堆，然后不断建堆，比较，建堆，比较，因为是用递归，所以，其实是从下往上走的。每个节点都和自己的子节点比较，将大的值放到父节点，那么，递归完成后，一定是大顶堆。</p>
+<p>所有排序的代码和注释放在git上，看需下载。</p>
 
     
     </div>
@@ -623,7 +629,7 @@
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_70b736d045ebcf760267cdd4ea91b4dcfe397c800788d1d0afc4f48bcb1cf24d').update('hashit_d2d4b8f1134b276e87158e887f26f85ac11a2c19f9c48dbe83b455e5422d2012', function(){});
+    new Postv2('hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6').update('hashit_419e5dbd2d7a0de350260821f570045543b31d552fea6ca4547d2466d3d1dc3b', function(){});
   });
   
 </script>
@@ -640,42 +646,42 @@
     
     LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.fetchIsThumbUp('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+    leanCloud.fetchIsThumbUp('/2019/06/08/一些经典算法/', json.ip);
     document.getElementById('thumb-up-button').addEventListener('click', function(e){
-      leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
+      leanCloud.isThumbUp('/2019/06/08/一些经典算法/', function(isThumbUp){
         console.log('is thumb up:' + isThumbUp);
         if(isThumbUp){
-          leanCloud.removeThumbUpRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+          leanCloud.removeThumbUpRecord('/2019/06/08/一些经典算法/', json.ip);
           document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
           
         }else{
-          leanCloud.addThumbUpRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
+          leanCloud.addThumbUpRecord('/2019/06/08/一些经典算法/', json.ip);
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
         }
-        leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+        leanCloud.getThumbUpCount('/2019/06/08/一些经典算法/', function(count){
             console.log('thumb up count: ' + count)
             var el = document.getElementById('article-thumbup-count');
             if(el) el.innerHTML = count;
         });
       });
     });
-    leanCloud.addVisitRecord('/2019/06/07/IntelliJ安装后个性化/', json.ip);
-    leanCloud.fetchCommentCount('/2019/06/07/IntelliJ安装后个性化/');
-    leanCloud.fetchVisitCount('/2019/06/07/IntelliJ安装后个性化/');
-    leanCloud.fetchThumbUpCount('/2019/06/07/IntelliJ安装后个性化/');
-    leanCloud.getCommentCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+    leanCloud.addVisitRecord('/2019/06/08/一些经典算法/', json.ip);
+    leanCloud.fetchCommentCount('/2019/06/08/一些经典算法/');
+    leanCloud.fetchVisitCount('/2019/06/08/一些经典算法/');
+    leanCloud.fetchThumbUpCount('/2019/06/08/一些经典算法/');
+    leanCloud.getCommentCount('/2019/06/08/一些经典算法/', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+    leanCloud.getVisitCount('/2019/06/08/一些经典算法/', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getThumbUpCount('/2019/06/07/IntelliJ安装后个性化/', function(count){
+    leanCloud.getThumbUpCount('/2019/06/08/一些经典算法/', function(count){
         var el = document.getElementById('article-thumbup-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.isThumbUp('/2019/06/07/IntelliJ安装后个性化/', function(isThumbUp){
+    leanCloud.isThumbUp('/2019/06/08/一些经典算法/', function(isThumbUp){
         console.log('init thumb up:' + isThumbUp);
         if(isThumbUp){
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
