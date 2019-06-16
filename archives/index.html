@@ -168,6 +168,62 @@
 
 
 
+<div class="Card-archive" id="hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1" data-name="leetcode刷题" data-version>
+	<mark class="Card-badge"></mark>
+	<div class="Card-body">
+		<h3 class="Card-title">
+			
+				<a href="/2019/06/16/leetcode刷题/">
+			
+			Leetcode刷题</a>
+		</h3>
+		<div class="Card-meta">
+			<div class="Card-tags">
+<div class="tags">
+	
+		
+			
+				<label class="tag-1"><a href="/tags/interview/">Interview</a></label>
+			
+		
+	
+		
+			
+				<label class="tag-2"><a href="/tags/leetcode/">Leetcode</a></label>
+			
+		
+	
+	</div>
+</div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class="fa fa-calendar"></i> 2019-06-16
+						</a>
+					</li>
+					
+					
+					<li>
+						<a href="/2019/06/16/leetcode刷题/#article-comment">
+							<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class="card-visit-count">0</span>
+					</li>
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
 <div class="Card-archive" id="hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6" data-name="一些经典算法" data-version>
 	<mark class="Card-badge"></mark>
 	<div class="Card-body">
@@ -458,6 +514,14 @@
           
           
           
+            var postBadge = document.querySelector('#hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6 mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -494,6 +558,36 @@
       success: function(){
           LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2019/06/16/leetcode刷题/', json.ip);
+          leanCloud.fetchCommentCount('/2019/06/16/leetcode刷题/');
+          leanCloud.fetchVisitCount('/2019/06/16/leetcode刷题/');
+          leanCloud.fetchThumbUpCount('/2019/06/16/leetcode刷题/');
+          leanCloud.getCommentCount('/2019/06/16/leetcode刷题/', function(count){
+              var el = document.querySelector('#hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2019/06/16/leetcode刷题/', function(count){
+              var el = document.querySelector('#hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2019/06/16/leetcode刷题/', function(count){
+              var el = document.querySelector('#hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2019/06/16/leetcode刷题/', function(isThumbUp){
+              var el = document.querySelector('#hashit_0524a9764e9961c8caee7e82ba4fbfdb4a282a9f51bc9e33587ae4716b2b7ce1 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           
