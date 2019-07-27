@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>一些经典算法 - Abel's Blog</title>
+      <title>aws常用 - Abel's Blog</title>
   
 
   
@@ -202,14 +202,14 @@
 
 
 
-<article class="article" id="/2019/06/08/一些经典算法/" data-name="一些经典算法" data-version>
+<article class="article" id="/2019/07/27/aws常用/" data-name="aws常用" data-version>
 
     <!-- Title -->
     <div class="article-header">
          
          <h1 class="article-title">
-            <a href="/2019/06/08/一些经典算法/">
-                一些经典算法
+            <a href="/2019/07/27/aws常用/">
+                Aws常用
             </a>
         </h1>
         <!-- TODO: support nested categories,display them nicely -->
@@ -219,7 +219,7 @@
     <!-- Date and Author -->
     <div class="article-meta">
     <ul>
-            <li><i class="fa fa-calendar"></i> 2019-06-08</li>
+            <li><i class="fa fa-calendar"></i> 2019-07-27</li>
             
             <li class="comment-button"><a href="#article-comment"><i class="fa fa-comments"></i> <span id="article-comment-count">0</span></a></li>
             <li><i class="fa fa-eye"></i> <span id="article-visit-count">0</span></li>
@@ -240,11 +240,7 @@
 <div class="tags">
 	
 		
-			<label class="tag-1"><a href="/tags/algorithm/">Algorithm</a></label>
-		
-	
-		
-			<label class="tag-2"><a href="/tags/interview/">Interview</a></label>
+			<label class="tag-1"><a href="/tags/aws/">Aws</a></label>
 		
 	
 	</div>
@@ -303,7 +299,12 @@
   <h3>Quick Read</h3>
 </div>
 <div class="card-text">
-  <p id="text-post-summary">...</p>
+  <p id="text-post-summary">现在工作上云的非常多，不管是以前的oracle云，还是现在的aws云，越来越多的企业希望将服务往云上推
+这是aws上一些经常遇见的内容
+申请账号啥的，现在aws有免费试用，随便申请一个玩玩吧
+首先了解s3
+然后看看ec2的建立建立后，试用ssh连接私有ip，当然如果暴露了公网那就随便了
+连接后如果想用docker参见上一篇docker的博闻aws configure 设置一下region使用aws ecr get-login –region us-east-1 –no-include-email查看登录帐号信息然后 使用docker login -u AWS -p XXX...</p>
 </div>
         </div> -->
     </div>
@@ -329,17 +330,16 @@
 
     </div>
     <div class="article-content">
-    <p>网上各种算法的详细解释已经很多了，<br>这里就放一些大纲。</p>
-<p>直接插入<br>希尔排序<br>二分排序<br>冒泡排序<br>选择排序<br>快速排序<br>归并排序<br>堆排序</p>
-<p>这几个要烂熟于心。</p>
-<p>其中：<br>希尔排序和插入排序一样，不同的是，将插入排序的每次+1换成步进值即可。</p>
-<p>二分排序，好多公司喜欢出这个和快排作为面试题，太经典了，一定要弄明白。</p>
-<p>冒泡排序和选择排序，这两个排序在写法上类似，但是：<br>冒泡排序是，第二个循环内部比较，每次都将最大的放到最右边，从而下次循环比较可以将排序范围的右边减少一个。</p>
-<p>选择排序是，两个循环的数值比较，每次将最小的放在最左边，从而每次排序范围从最左边减少一个。</p>
-<p>快排，不管是刨坑法，还是换位法，主要思想就是找中轴线，先排后分再递归。<br>每次排序找出中轴线j的位置，然后low–j-1, j+1–high,分成两个部分，用递归即可。</p>
-<p>归并，先分再排最后合。归并是将整个数组按mid分成两部分，然后再排序。当分成不能再分割的两部分时，排序（有奇数、有偶数的情况）。将每一小块排序完，合并在一起，即完成排序。</p>
-<p>堆排序，这个理论比前边的多一些，先把所有数据看成一个完全二叉树（完全二叉树，完美二叉树，满二叉树的区别了解一下）。<br>先做出大根堆，然后不断建堆，比较，建堆，比较，因为是用递归，所以，其实是从下往上走的。每个节点都和自己的子节点比较，将大的值放到父节点，那么，递归完成后，一定是大顶堆。</p>
-<p>所有排序的代码和注释放在git上，看需下载。</p>
+    <p>现在工作上云的非常多，<br>不管是以前的oracle云，还是现在的aws云，<br>越来越多的企业希望将服务往云上推</p>
+<p>这是aws上一些经常遇见的内容</p>
+<p>申请账号啥的，<br>现在aws有免费试用，随便申请一个玩玩吧</p>
+<p>首先了解s3</p>
+<p>然后看看ec2的建立<br>建立后，试用ssh连接私有ip，当然如果暴露了公网<br>那就随便了</p>
+<p>连接后<br>如果想用docker<br>参见上一篇docker的博闻<br>aws configure 设置一下region<br>使用aws ecr get-login –region us-east-1 –no-include-email查看登录帐号信息<br>然后 使用docker login -u AWS -p XXX https://要连的地址<br>将第一条指令查询出的 -p后面的内容粘过来 后面的https的内容 换成你要登录的地址即可<br>然后就可以pull image</p>
+<p>不同的docker使用的base image不同，<br>所以基础操作系统总是会不一样</p>
+<p>查看linux版本<br>查看版本<br>所有linux都适用<br>cat /etc/issue<br>cat /proc/version<br>uname -a</p>
+<p>根据不同的linux版本，<br>指令不尽相同</p>
+<p>这点要注意</p>
 
     
     </div>
@@ -499,7 +499,7 @@
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_09816682a68f546798c5739a429f33a78eb644526c644e5673544359b7155ba6').update('hashit_419e5dbd2d7a0de350260821f570045543b31d552fea6ca4547d2466d3d1dc3b', function(){});
+    new Postv2('hashit_f041cfbc5ef6edc10489adf2bb3a24ad93b6937812210f269e5f2a4a97a7bdba').update('hashit_8dbaa5fb285f1b9d89f8f056405bbf914e22e2efe2594ab7103db047b5d28e25', function(){});
   });
   
 </script>
@@ -516,42 +516,42 @@
     
     LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.fetchIsThumbUp('/2019/06/08/一些经典算法/', json.ip);
+    leanCloud.fetchIsThumbUp('/2019/07/27/aws常用/', json.ip);
     document.getElementById('thumb-up-button').addEventListener('click', function(e){
-      leanCloud.isThumbUp('/2019/06/08/一些经典算法/', function(isThumbUp){
+      leanCloud.isThumbUp('/2019/07/27/aws常用/', function(isThumbUp){
         console.log('is thumb up:' + isThumbUp);
         if(isThumbUp){
-          leanCloud.removeThumbUpRecord('/2019/06/08/一些经典算法/', json.ip);
+          leanCloud.removeThumbUpRecord('/2019/07/27/aws常用/', json.ip);
           document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
           
         }else{
-          leanCloud.addThumbUpRecord('/2019/06/08/一些经典算法/', json.ip);
+          leanCloud.addThumbUpRecord('/2019/07/27/aws常用/', json.ip);
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
         }
-        leanCloud.getThumbUpCount('/2019/06/08/一些经典算法/', function(count){
+        leanCloud.getThumbUpCount('/2019/07/27/aws常用/', function(count){
             console.log('thumb up count: ' + count)
             var el = document.getElementById('article-thumbup-count');
             if(el) el.innerHTML = count;
         });
       });
     });
-    leanCloud.addVisitRecord('/2019/06/08/一些经典算法/', json.ip);
-    leanCloud.fetchCommentCount('/2019/06/08/一些经典算法/');
-    leanCloud.fetchVisitCount('/2019/06/08/一些经典算法/');
-    leanCloud.fetchThumbUpCount('/2019/06/08/一些经典算法/');
-    leanCloud.getCommentCount('/2019/06/08/一些经典算法/', function(count){
+    leanCloud.addVisitRecord('/2019/07/27/aws常用/', json.ip);
+    leanCloud.fetchCommentCount('/2019/07/27/aws常用/');
+    leanCloud.fetchVisitCount('/2019/07/27/aws常用/');
+    leanCloud.fetchThumbUpCount('/2019/07/27/aws常用/');
+    leanCloud.getCommentCount('/2019/07/27/aws常用/', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/2019/06/08/一些经典算法/', function(count){
+    leanCloud.getVisitCount('/2019/07/27/aws常用/', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getThumbUpCount('/2019/06/08/一些经典算法/', function(count){
+    leanCloud.getThumbUpCount('/2019/07/27/aws常用/', function(count){
         var el = document.getElementById('article-thumbup-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.isThumbUp('/2019/06/08/一些经典算法/', function(isThumbUp){
+    leanCloud.isThumbUp('/2019/07/27/aws常用/', function(isThumbUp){
         console.log('init thumb up:' + isThumbUp);
         if(isThumbUp){
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";

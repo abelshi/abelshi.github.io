@@ -123,7 +123,7 @@
 		
 				<div class="nav-icon">
 				
-			<a href="/archives/" title="Archives">
+			<a href="/archives/" title="归档">
 			<img src="/images/icons/colorful-outlined/archive.svg" alt>
 			</a>
 		</div>
@@ -132,7 +132,7 @@
 		
 		<div class="nav-icon">
 		
-			<a href="/search/" title="Search">
+			<a href="/search/" title="搜索">
 			<img src="/images/icons/colorful-outlined/search.svg" alt>
 			</a>
 		</div>
@@ -327,7 +327,7 @@
     </div>
     <div class="article-content">
     <p>就是普通的常用docker内容</p>
-<p>安装最新的 Docker Community Edition 程序包:<br>sudo yum install -y docker<br>启动 Docker 服务:<br>sudo service docker start<br>将 ec2-user 添加到 docker 组，以便您能够执行 Docker 命令，而无需使用 sudo:<br>sudo usermod -a -G docker ec2-user<br>退出，再重新登录以接受新的 Docker 组权限。您的新 SSH 会话将具有相应的 Docker 组权限，<br>而无需再使用 sudo。<br>为了避免每次使用Docker命令时都需要切换到root账户，可以将当前用户加入安装中自动创建的 docker用户组:<br>$ sudo usermod -aG docker $USER</p>
+<p>安装最新的 Docker Community Edition 程序包:<br>sudo yum install -y docker<br>启动 Docker 服务:<br>sudo service docker start<br>将 ec2-user 添加到 docker 组，以便您能够执行 Docker 命令，而无需使用 sudo:<br>sudo usermod -a -G docker ec2-user<br>退出，再重新登录以接受新的 Docker 组权限。您的新 SSH 会话将具有相应的 Docker 组权限，<br>而无需再使用 sudo。<br>为了避免每次使用Docker命令时都需要切换到root账户，可以将当前用户加入安装中自动创建的 docker用户组:<br>sudo usermod -aG docker $USER</p>
 <p>当然 更简单的方式是<br>sudo -s</p>
 <p>因为电脑是win7 所以下载Docker Toolbox Win10或mac有其他的安装程序<br>然后安装，<br>安装完毕后，使用管理员权限运行。 如果报错，vmanage.box之类的问题，卸载自带的visual box，因为这个版本太高，会报错<br>安装visual box4.6版本。 完毕后，重新运行程序。<br>进入后，是win命令行。 如果想要使用linux命令行， 执行:docker-machine ssh default 推出linux命令行 执行:exit<br>输入<br>docker pull hello-world docker run hello-world</p>
 <p>如果有一个repository，去build那里的Dockerfile或者，直接pull那的image<br>需要 docker login –username=用户名 –password=密码 要登录的地址<br>然后执行 docker pull image地址<br>如果，是本地的Dockerfile，文件里的FROM是从一个repository中做base，则也需要登录。<br>build本地file的命令是:<br>docker build -t 起名字:版本号 .</p>
@@ -344,7 +344,7 @@
         <div class="article-comment" id="article-comment">
             
 
-<h1>Comment</h1>
+<h1>评论</h1>
 
   
     <div id="valine"></div>
@@ -361,8 +361,8 @@
 <footer id="footer">
     <div class="footer-copyright">
         <div>
-            <p> Copyright by <a href>Abel Shi </a> @ 2019</p>
-            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.1.3-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+            <p> 版权所有 <a href>Abel Shi </a> @ 2019</p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.1.3-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
         </div>
     </div>
     
@@ -410,7 +410,7 @@
 		
 				<div class="nav-icon">
 				
-			<a href="/archives/" title="Archives">
+			<a href="/archives/" title="归档">
 			<img src="/images/icons/colorful-outlined/archive.svg" alt>
 			</a>
 		</div>
@@ -419,7 +419,7 @@
 		
 		<div class="nav-icon">
 		
-			<a href="/search/" title="Search">
+			<a href="/search/" title="搜索">
 			<img src="/images/icons/colorful-outlined/search.svg" alt>
 			</a>
 		</div>
@@ -495,7 +495,7 @@
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_c5d6987df54971525827dd776a96d9e464995c77157e2b224ddf17254b401f7d').update('hashit_c3f229421ea05bf4d656eb053789dfdb5dc39524ccc8d07ab50385fa83db5da2', function(){});
+    new Postv2('hashit_c5d6987df54971525827dd776a96d9e464995c77157e2b224ddf17254b401f7d').update('hashit_1b6fdd953c6af80f854aea25af1c3c244f29a647184f88c6b6518c85f06c2cf4', function(){});
   });
   
 </script>
