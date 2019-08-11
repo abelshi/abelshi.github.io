@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>常用docker内容 - Abel's Blog</title>
+      <title>anki-好东西 - Abel's Blog</title>
   
 
   
@@ -202,14 +202,14 @@
 
 
 
-<article class="article" id="/2019/07/20/常用docker内容/" data-name="常用docker内容" data-version>
+<article class="article" id="/2019/08/11/anki-好东西/" data-name="anki-好东西" data-version>
 
     <!-- Title -->
     <div class="article-header">
          
          <h1 class="article-title">
-            <a href="/2019/07/20/常用docker内容/">
-                常用Docker内容
+            <a href="/2019/08/11/anki-好东西/">
+                Anki-好东西
             </a>
         </h1>
         <!-- TODO: support nested categories,display them nicely -->
@@ -219,7 +219,7 @@
     <!-- Date and Author -->
     <div class="article-meta">
     <ul>
-            <li><i class="fa fa-calendar"></i> 2019-07-20</li>
+            <li><i class="fa fa-calendar"></i> 2019-08-11</li>
             
             <li class="comment-button"><a href="#article-comment"><i class="fa fa-comments"></i> <span id="article-comment-count">0</span></a></li>
             <li><i class="fa fa-eye"></i> <span id="article-visit-count">0</span></li>
@@ -240,7 +240,7 @@
 <div class="tags">
 	
 		
-			<label class="tag-1"><a href="/tags/docker/">Docker</a></label>
+			<label class="tag-1"><a href="/tags/anki/">Anki</a></label>
 		
 	
 	</div>
@@ -299,8 +299,13 @@
   <h3>Quick Read</h3>
 </div>
 <div class="card-text">
-  <p id="text-post-summary">就是普通的常用docker内容
-安装最新的 Docker Community Edition 程序包:sudo yum install -y docker启动 Docker 服务:sudo service docker start将 ec2-user 添加到 docker 组，以便您能够执行 Docker 命令，而无需使用 sudo:sudo usermod -a -G docker ec2-user退出，再重新登录以接受新的 Docker 组权限。您的新 SSH 会话将具有相应的 Docker 组权限，而无需再使用...</p>
+  <p id="text-post-summary">一直保持学习习惯，大家也都知道，学习中，最可怕的就是遗忘。只有记住的才是自己的。anki这款软件可以很好地帮助学习。
+只有安卓版是免费，iOS是收费的！！！sigh叹口气
+为了这款软件都要买一只安卓手机
+还好，去联通续期宽带，加98给一只vivo y70，虽然是联发科的破手机，不过随便用用也足够了。回来就装上anki，真好用！
+网上有各种各样的资源，教程，我是看知乎上的：https://zhuanlan.zhihu.com/-anki
+有学习的意识，当然好，有好东西助力，当然更好~
+keep trying~</p>
 </div>
         </div> -->
     </div>
@@ -326,16 +331,13 @@
 
     </div>
     <div class="article-content">
-    <p>就是普通的常用docker内容</p>
-<p>安装最新的 Docker Community Edition 程序包:<br>sudo yum install -y docker<br>启动 Docker 服务:<br>sudo service docker start<br>将 ec2-user 添加到 docker 组，以便您能够执行 Docker 命令，而无需使用 sudo:<br>sudo usermod -a -G docker ec2-user<br>退出，再重新登录以接受新的 Docker 组权限。您的新 SSH 会话将具有相应的 Docker 组权限，<br>而无需再使用 sudo。<br>为了避免每次使用Docker命令时都需要切换到root账户，可以将当前用户加入安装中自动创建的 docker用户组:<br>sudo usermod -aG docker $USER</p>
-<p>当然 更简单的方式是<br>sudo -s</p>
-<p>因为电脑是win7 所以下载Docker Toolbox Win10或mac有其他的安装程序<br>然后安装，<br>安装完毕后，使用管理员权限运行。 如果报错，vmanage.box之类的问题，卸载自带的visual box，因为这个版本太高，会报错<br>安装visual box4.6版本。 完毕后，重新运行程序。<br>进入后，是win命令行。 如果想要使用linux命令行， 执行:docker-machine ssh default 推出linux命令行 执行:exit<br>输入<br>docker pull hello-world docker run hello-world</p>
-<p>如果有一个repository，去build那里的Dockerfile或者，直接pull那的image<br>需要 docker login –username=用户名 –password=密码 要登录的地址<br>然后执行 docker pull image地址<br>如果，是本地的Dockerfile，文件里的FROM是从一个repository中做base，则也需要登录。<br>build本地file的命令是:<br>docker build -t 起名字:版本号 .</p>
-<p>如果，build或者pull的时候报错， EOF，这种错误很常见， 一般来说都是网速太慢导致的。<br>可以有以下几种方式:<br>1.添加镜像来加速<br>2.增加同时下载的线程数<br>在linux命令行下:<br>vim /etc/docker/daemon.json<br>{
-“registry-mirrors”: [“<a href="https://registry.docker-cn.com&quot;]" target="_blank" rel="noopener">https://registry.docker-cn.com&quot;]</a>, “insecure-registries”: [“registry.docker-cn.com”], “max-concurrent-downloads”: 10,<br>“log-driver”: “json-file”,<br>“log-level”: “warn”,<br>“log-opts”: {<br>“max-size”: “10m”,<br>“max-file”: “3” }<br>}</p>
-<p>修改daemon文件后，要重启docker才能生效<br>Linux: service docker restart Win: docker-machine restart<br>docker镜像保存在 /var/lib/docker/ 目录下<br>ref地址：<a href="https://docs.docker.com/registry/spec/api/" target="_blank" rel="noopener">https://docs.docker.com/registry/spec/api/</a><br>虽然这里面写着Docker支持断点续传<br>但实际上不支持，如果一段时间下不完，就重新从头开始再下一遍。<br>所以，修改daemon文件是目前唯一可以加速的方式。</p>
-<p>后台执行容器<br>docker run -d <image_name> tail -f /dev/null<br>进入执行中的容器<br>docker exec -it CONTAINER_ID bash</image_name></p>
-<p>docker内最重要的是起服务后，<br>容器间通信，<br>有时间单写一篇。</p>
+    <p>一直保持学习习惯，<br>大家也都知道，学习中，最可怕的就是遗忘。<br>只有记住的才是自己的。<br>anki这款软件可以很好地帮助学习。</p>
+<p>只有安卓版是免费，iOS是收费的！！！<br>sigh<br>叹口气</p>
+<p>为了这款软件都要买一只安卓手机</p>
+<p>还好，<br>去联通续期宽带，<br>加98给一只vivo y70，<br>虽然是联发科的破手机，<br>不过随便用用也足够了。<br>回来就装上anki，<br>真好用！</p>
+<p>网上有各种各样的资源，教程，<br>我是看知乎上的：<a href="https://zhuanlan.zhihu.com/-anki" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/-anki</a></p>
+<p>有学习的意识，当然好，<br>有好东西助力，当然更好~
+keep trying~</p>
 
     
     </div>
@@ -495,7 +497,7 @@
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_c5d6987df54971525827dd776a96d9e464995c77157e2b224ddf17254b401f7d').update('hashit_1b6fdd953c6af80f854aea25af1c3c244f29a647184f88c6b6518c85f06c2cf4', function(){});
+    new Postv2('hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a').update('hashit_4e92311068df349d918c8a71b8859b422a2e304c81bb2f81c87d1b6c3bab3523', function(){});
   });
   
 </script>
@@ -512,42 +514,42 @@
     
     LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.fetchIsThumbUp('/2019/07/20/常用docker内容/', json.ip);
+    leanCloud.fetchIsThumbUp('/2019/08/11/anki-好东西/', json.ip);
     document.getElementById('thumb-up-button').addEventListener('click', function(e){
-      leanCloud.isThumbUp('/2019/07/20/常用docker内容/', function(isThumbUp){
+      leanCloud.isThumbUp('/2019/08/11/anki-好东西/', function(isThumbUp){
         console.log('is thumb up:' + isThumbUp);
         if(isThumbUp){
-          leanCloud.removeThumbUpRecord('/2019/07/20/常用docker内容/', json.ip);
+          leanCloud.removeThumbUpRecord('/2019/08/11/anki-好东西/', json.ip);
           document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
           
         }else{
-          leanCloud.addThumbUpRecord('/2019/07/20/常用docker内容/', json.ip);
+          leanCloud.addThumbUpRecord('/2019/08/11/anki-好东西/', json.ip);
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
         }
-        leanCloud.getThumbUpCount('/2019/07/20/常用docker内容/', function(count){
+        leanCloud.getThumbUpCount('/2019/08/11/anki-好东西/', function(count){
             console.log('thumb up count: ' + count)
             var el = document.getElementById('article-thumbup-count');
             if(el) el.innerHTML = count;
         });
       });
     });
-    leanCloud.addVisitRecord('/2019/07/20/常用docker内容/', json.ip);
-    leanCloud.fetchCommentCount('/2019/07/20/常用docker内容/');
-    leanCloud.fetchVisitCount('/2019/07/20/常用docker内容/');
-    leanCloud.fetchThumbUpCount('/2019/07/20/常用docker内容/');
-    leanCloud.getCommentCount('/2019/07/20/常用docker内容/', function(count){
+    leanCloud.addVisitRecord('/2019/08/11/anki-好东西/', json.ip);
+    leanCloud.fetchCommentCount('/2019/08/11/anki-好东西/');
+    leanCloud.fetchVisitCount('/2019/08/11/anki-好东西/');
+    leanCloud.fetchThumbUpCount('/2019/08/11/anki-好东西/');
+    leanCloud.getCommentCount('/2019/08/11/anki-好东西/', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/2019/07/20/常用docker内容/', function(count){
+    leanCloud.getVisitCount('/2019/08/11/anki-好东西/', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getThumbUpCount('/2019/07/20/常用docker内容/', function(count){
+    leanCloud.getThumbUpCount('/2019/08/11/anki-好东西/', function(count){
         var el = document.getElementById('article-thumbup-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.isThumbUp('/2019/07/20/常用docker内容/', function(isThumbUp){
+    leanCloud.isThumbUp('/2019/08/11/anki-好东西/', function(isThumbUp){
         console.log('init thumb up:' + isThumbUp);
         if(isThumbUp){
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";

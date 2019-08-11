@@ -109,7 +109,7 @@
 		
 				<div class="nav-icon active_dot">
 				
-			<a href="/archives/" title="归档">
+			<a href="/archives/" title="Archives">
 			<img src="/images/icons/colorful-outlined/archive.svg" alt>
 			</a>
 		</div>
@@ -118,7 +118,7 @@
 		
 		<div class="nav-icon">
 		
-			<a href="/search/" title="搜索">
+			<a href="/search/" title="Search">
 			<img src="/images/icons/colorful-outlined/search.svg" alt>
 			</a>
 		</div>
@@ -162,6 +162,56 @@
 		<h2 class="archive-title"></h2>
 	
 	<div class="archive-cards">
+	
+		
+
+
+
+
+<div class="Card-archive" id="hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a" data-name="anki-好东西" data-version>
+	<mark class="Card-badge"></mark>
+	<div class="Card-body">
+		<h3 class="Card-title">
+			
+				<a href="/2019/08/11/anki-好东西/">
+			
+			Anki-好东西</a>
+		</h3>
+		<div class="Card-meta">
+			<div class="Card-tags">
+<div class="tags">
+	
+		
+			
+				<label class="tag-1"><a href="/tags/anki/">Anki</a></label>
+			
+		
+	
+	</div>
+</div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class="fa fa-calendar"></i> 2019-08-11
+						</a>
+					</li>
+					
+					
+					<li>
+						<a href="/2019/08/11/anki-好东西/#article-comment">
+							<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class="card-visit-count">0</span>
+					</li>
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
 	
 		
 
@@ -546,8 +596,8 @@
 <footer id="footer">
     <div class="footer-copyright">
         <div>
-            <p> 版权所有 <a href>Abel Shi </a> @ 2019</p>
-            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.1.3-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+            <p> Copyright by <a href>Abel Shi </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.1.3-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
         </div>
     </div>
     
@@ -581,7 +631,7 @@
 		
 				<div class="nav-icon active_dot">
 				
-			<a href="/archives/" title="归档">
+			<a href="/archives/" title="Archives">
 			<img src="/images/icons/colorful-outlined/archive.svg" alt>
 			</a>
 		</div>
@@ -590,7 +640,7 @@
 		
 		<div class="nav-icon">
 		
-			<a href="/search/" title="搜索">
+			<a href="/search/" title="Search">
 			<img src="/images/icons/colorful-outlined/search.svg" alt>
 			</a>
 		</div>
@@ -670,6 +720,14 @@
           
           
           
+            var postBadge = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_f041cfbc5ef6edc10489adf2bb3a24ad93b6937812210f269e5f2a4a97a7bdba mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -738,6 +796,36 @@
       success: function(){
           LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2019/08/11/anki-好东西/', json.ip);
+          leanCloud.fetchCommentCount('/2019/08/11/anki-好东西/');
+          leanCloud.fetchVisitCount('/2019/08/11/anki-好东西/');
+          leanCloud.fetchThumbUpCount('/2019/08/11/anki-好东西/');
+          leanCloud.getCommentCount('/2019/08/11/anki-好东西/', function(count){
+              var el = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2019/08/11/anki-好东西/', function(count){
+              var el = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2019/08/11/anki-好东西/', function(count){
+              var el = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2019/08/11/anki-好东西/', function(isThumbUp){
+              var el = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           
