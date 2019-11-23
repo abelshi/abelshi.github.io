@@ -168,6 +168,56 @@
 
 
 
+<div class="Card-archive" id="hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39" data-name="macOS Catalina下的一些问题解决" data-version>
+	<mark class="Card-badge"></mark>
+	<div class="Card-body">
+		<h3 class="Card-title">
+			
+				<a href="/2019/11/23/macOS-Catalina下的一些问题解决/">
+			
+			macOS Catalina下的一些问题解决</a>
+		</h3>
+		<div class="Card-meta">
+			<div class="Card-tags">
+<div class="tags">
+	
+		
+			
+				<label class="tag-1"><a href="/tags/macOS/">Macos</a></label>
+			
+		
+	
+	</div>
+</div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class="fa fa-calendar"></i> 2019-11-23
+						</a>
+					</li>
+					
+					
+					<li>
+						<a href="/2019/11/23/macOS-Catalina下的一些问题解决/#article-comment">
+							<i class="fa fa-comments"></i> <span class="card-comment-count">0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class="card-visit-count">0</span>
+					</li>
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
 <div class="Card-archive" id="hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a" data-name="anki-好东西" data-version>
 	<mark class="Card-badge"></mark>
 	<div class="Card-body">
@@ -720,6 +770,14 @@
           
           
           
+            var postBadge = document.querySelector('#hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_06edf6352464326cffcd9107bfa3070ad8f82331904af792dad8dcbb6cb5b43a mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -796,6 +854,36 @@
       success: function(){
           LeanCloud.init('qwWQMg4eiht16YuHq9zGSbrI-gzGzoHsz', 'fN8FkcgRBqFBAI8DLbFjxu7e');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2019/11/23/macOS-Catalina下的一些问题解决/', json.ip);
+          leanCloud.fetchCommentCount('/2019/11/23/macOS-Catalina下的一些问题解决/');
+          leanCloud.fetchVisitCount('/2019/11/23/macOS-Catalina下的一些问题解决/');
+          leanCloud.fetchThumbUpCount('/2019/11/23/macOS-Catalina下的一些问题解决/');
+          leanCloud.getCommentCount('/2019/11/23/macOS-Catalina下的一些问题解决/', function(count){
+              var el = document.querySelector('#hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2019/11/23/macOS-Catalina下的一些问题解决/', function(count){
+              var el = document.querySelector('#hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2019/11/23/macOS-Catalina下的一些问题解决/', function(count){
+              var el = document.querySelector('#hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2019/11/23/macOS-Catalina下的一些问题解决/', function(isThumbUp){
+              var el = document.querySelector('#hashit_a506a7c17dcc6e8b892ec1000ba876e58433aad36976bf45bd094b63ff404f39 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           
